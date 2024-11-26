@@ -1,53 +1,18 @@
-
 <div class="row">
-    <div class="col-3">
-        <p>{{firstName}}</p>
-    </div>
-    <div class="col-2">
-        <p>collll</p>
-    </div>
-    <div class="col-3">
-        <p>Lorem, ipsum dolor.</p>
-    </div>
-    <div class="col-3">
-        <p>Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="col-3">
-        <p>{{selectedOption}}</p>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-3">
-        <input type="text" [value]="firstName" class="form-control"/>
-    </div>
-    <div class="col-3">
-        <input type="text" [(ngModel)]="firstName" class="form-control"/>
-    </div>
-    <div class="col-4">
-        <select [(ngModel)]="selectedOption">
-            <option value="KA">KA</option>
-            <option value="MP">MP</option>
-            <option value="MH">MH</option>
-            <option value="GA">GA</option>
-            <option value="MP">MP</option>
-            <option value="MP">MP</option>
-        </select>
-    </div>
-    
-</div>
-
-<div class="row">
-    <div class="col-3">
-        <button class="btn btn-success" (click)="showHelloAlert()">click here</button>
-    </div>
-    <div class="col-3">
-        <button class="btn btn-success" (click)="showMessageAlert('welcomeeeeeee')">click here with messsss</button>
-    </div>
-    <div class="col-3">
-        <button class="btn btn-success" (click)="showMessageAlert('welcome')">click here with messsss</button>
-    </div>
-    <div class="col-3">
-        <button class="btn btn-success" (click)="showMessageAlert('Angular')">click here with messsss</button>
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sl no</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of roleList; let slno=index">
+                    <th>{{slno+1}}</th>
+                    <th>{{item.role}}</th>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
